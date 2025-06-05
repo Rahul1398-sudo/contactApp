@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Bungee+Tint&family=Inconsolata:wght@200..900&family=Lexend:wght@100..900&family=Lobster&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="/favicon.png" />
+  <link rel="stylesheet" href="/show.css" />
+
+  <title>Chat App</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="/home">
+        <h1 class="rainbow-text">CONTACT APP</h1>
+      </a>
+    </div>
+  </nav>
+
+  <div class="details">
+    <h2>Contact Details</h2>
+  </div>
+  <div class="form_container">
+    <form>
+      <div class="form_group">
+        <label for="firstName">First Name:</label>
+        <div class="all_group">
+          <p class="form-control-plaintext text-muted">
+            <%=contact.first_Name%>
+          </p>
+        </div>
+      </div>
+      <div class="form_group">
+        <label for="LastName">Last Name:</label>
+        <div class="all_group">
+          <p class="form-control-plaintext text-muted">
+            <%=contact.last_Name%>
+          </p>
+        </div>
+      </div>
+      <div class="form_group">
+        <label for="Email">Email:</label>
+        <div class="all_group">
+          <p class="form-control-plaintext text-muted">
+            <%=contact.email%>
+          </p>
+        </div>
+      </div>
+      <div class="form_group">
+        <label for="Phone">Phone:</label>
+        <div class="all_group">
+          <p class="form-control-plaintext text-muted" onclick="required 10 digit contact details">
+            <%=contact.phone%>
+          </p>
+        </div>
+      </div>
+      <div class="form_group">
+        <label for="address">Address:</label>
+        <div class="all_group">
+          <p class="form-control-plaintext text-muted">
+            <%=contact.address%>
+          </p>
+        </div>
+      </div>
+      <div class="btn">
+        <div class="btn_1">
+          <a href="/update-contact/<%=contact._id%>" class="btn btn-info">Edit</a>
+          <a href="/delete-contact/<%=contact._id%>" class="btn btn-outline-danger">Delete</a>
+          <a href="/home" class="btn btn-outline-secondary">Cancel</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

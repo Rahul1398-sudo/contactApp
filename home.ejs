@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Bungee+Tint&family=Inconsolata:wght@200..900&family=Lexend:wght@100..900&family=Lobster&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="/favicon.png" />
+
+  <link rel="stylesheet" href="/style.css" />
+
+  <title>Chat App</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="app-name">
+      <h1>CONTACT APP</h1>
+      <i class="fa fa-info-circle" aria-hidden="true"></i>
+    </div>
+    <main class="navbar">
+      <div class="All-contacts">All Contacts</div>
+      <div class="row">
+        <a href="/add-contact">
+          <div class="fa-fa">
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+          </div>
+          <div class="add-new">Add New</div>
+      </div>
+      </a>
+    </main>
+  </div>
+
+  <div class="table-container1">
+    <table>
+      <thead>
+        <tr>
+          <th>Sl No.</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <div class="t-body">
+        <tbody>
+          <% var slno =1%>
+          <% contacts.forEach(contact=> { %>
+            <tr>
+              <td><%=slno++%>
+              </td>
+              <td><%=contact.first_Name %></td>
+              <td><%=contact.last_Name %></td>
+              <td><%=contact.email %></td>
+              <td><%=contact.phone %></td>
+              <td>
+                <div class="fa-fa1">
+                  <a href="/show-contact/<%=contact._id %>" onclick="confirm(`Are you sure!You want show `)" title="Show"><i
+                      class="fa fa-eye"></i></a>
+
+                  <a href="/update-contact/<%=contact._id %>" onclick="confirm(`Are you sure! You want update`)" title="update"><i
+                      class="fa fa-edit"></i></a>
+
+                  <a href="/delete-contact/<%=contact._id %>" title="Delete" onclick="confirm('Are you sure?!You want delete')"><i
+                      class="fa fa-times"></i></a>
+                </div>
+              </td>
+            </tr>
+         <% })%>
+
+        </tbody>
+        <!-- <tbody>
+          <tr>
+            <td>2</td>
+            <td>Rohan</td>
+            <td>Yadav</td>
+            <td>Rohan Yadav@gmail.com</td>
+            <td>8765656111</td>
+            <td>
+              <div class="fa-fa1">
+                <a href="/show-contact" onclick="confirm(`Are you sure!You want show `)" title="Show"><i
+                    class="fa fa-eye"></i></a>
+
+                <a href="/update-contact" onclick="confirm(`Are you sure! You want update `)" title="update"><i
+                    class="fa fa-edit"></i></a>
+
+                <a href="#" title="Delete" onclick="confirm('Are you sure?!You want delete')"><i
+                    class="fa fa-times"></i></a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>3</td>
+            <td>Gurudev</td>
+            <td>Das</td>
+            <td>Gurudev@gmail.com</td>
+            <td>9876585210</td>
+            <td>
+              <div class="fa-fa1">
+                <a href="/show-contact" onclick="confirm(`Are you sure!You want show `)" title="Show"><i
+                    class="fa fa-eye"></i></a>
+
+                <a href="/update-contact" onclick="confirm(`Are you sure! You want update `)" title="update"><i
+                    class="fa fa-edit"></i></a>
+
+                <a href="#" title="Delete" onclick="confirm('Are you sure?!You want delete')"><i
+                    class="fa fa-times"></i></a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>4</td>
+            <td>Komal</td>
+            <td>Sharma</td>
+            <td>KomalSharma@gmail.com</td>
+            <td>9765243210</td>
+            <td>
+              <div class="fa-fa1">
+                <a href="/show-contact" onclick="confirm(`Are you sure!You want show `)" title="Show"><i
+                    class="fa fa-eye"></i></a>
+
+                <a href="/update-contact" onclick="confirm(`Are you sure! You want update `)" title="update"><i
+                    class="fa fa-edit"></i></a>
+
+                <a href="#" title="Delete" onclick="confirm('Are you sure?!You want delete')"><i
+                    class="fa fa-times"></i></a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>5</td>
+            <td>Tedha</td>
+            <td>Singh</td>
+            <td>Tedha@gmail.com</td>
+            <td>9872543210</td>
+            <td>
+              <div class="fa-fa1">
+                <a href="/show-contact" onclick="confirm(`Are you sure!You want show `)" title="Show"><i
+                    class="fa fa-eye"></i></a>
+
+                <a href="/update-contact" onclick="confirm(`Are you sure! You want update `)" title="update"><i
+                    class="fa fa-edit"></i></a>
+
+                <a href="#" title="Delete" onclick="confirm('Are you sure?!You want delete')"><i
+                    class="fa fa-times"></i></a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>6</td>
+            <td>Rohan</td>
+            <td>Dev</td>
+            <td>rdev@gmail.com</td>
+            <td>9852543210</td>
+            <td>
+              <div class="fa-fa1">
+                <a href="/show-contact" onclick="confirm(`Are you sure!You want show `)" title="Show"><i
+                    class="fa fa-eye"></i></a>
+
+                <a href="/update-contact" onclick="confirm(`Are you sure! You want update `)" title="update"><i
+                    class="fa fa-edit"></i></a>
+
+                <a href="#" title="Delete" onclick="confirm('Are you sure?!You want delete')"><i
+                    class="fa fa-times"></i></a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>7</td>
+            <td>Dukhi</td>
+            <td>Atma</td>
+            <td>atma@gmail.com</td>
+            <td>9662543210</td>
+            <td>
+              <div class="fa-fa1">
+                <a href="/show-contact" onclick="confirm(`Are you sure!You want show `)" title="Show"><i
+                    class="fa fa-eye"></i></a>
+
+                <a href="/update-contact" onclick="confirm(`Are you sure! You want update `)" title="update"><i
+                    class="fa fa-edit"></i></a>
+
+                <a href="#" title="Delete" onclick="confirm('Are you sure?!You want delete')"><i
+                    class="fa fa-times"></i></a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>8</td>
+            <td>Ghonru</td>
+            <td>Singh</td>
+            <td>Gs@gmail.com</td>
+            <td>9878543210</td>
+            <td>
+              <div class="fa-fa1">
+                <a href="/show-contact" onclick="confirm(`Are you sure!You want show `)" title="Show"><i
+                    class="fa fa-eye"></i></a>
+
+                <a href="/update-contact" onclick="confirm(`Are you sure! You want update `)" title="update"><i
+                    class="fa fa-edit"></i></a>
+
+                <a href="#" title="Delete" onclick="confirm('Are you sure?!You want delete')"><i
+                    class="fa fa-times"></i></a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>9</td>
+            <td>Lota</td>
+            <td>Singh</td>
+            <td>Lsingh@gmail.com</td>
+            <td>9872543210</td>
+            <td>
+              <div class="fa-fa1">
+                <a href="/sho/update-contact" onclick="confirm(`Are you sure!You want show `)" title="Show"><i
+                    class="fa fa-eye"></i></a>
+
+                <a href="form.html" onclick="confirm(`Are you sure! You want update `)" title="update"><i
+                    class="fa fa-edit"></i></a>
+
+                <a href="#" title="Delete" onclick="confirm('Are you sure?!You want delete')"><i
+                    class="fa fa-times"></i></a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>10</td>
+            <td>Shivam</td>
+            <td>Singh</td>
+            <td>SS@gmail.com</td>
+            <td>9872543880</td>
+            <td>
+              <div class="fa-fa1">
+                <a href="/show-contact" onclick="confirm(`Are you sure!You want show `)" title="Show"><i
+                    class="fa fa-eye"></i></a>
+
+                <a href="/update-contact" onclick="confirm(`Are you sure! You want update `)" title="update"><i
+                    class="fa fa-edit"></i></a>
+
+                <a href="#" title="Delete" onclick="confirm('Are you sure?!You want delete')"><i
+                    class="fa fa-times"></i></a>
+              </div>
+            </td>
+          </tr>
+        </tbody> -->
+      </div>
+    </table>
+  </div>
+
+  <div class="footer">
+    App created by Rahul Ranjan ✨! <br />
+    ❤️
+  </div>
+</body>
+
+</html>

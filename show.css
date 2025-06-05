@@ -1,0 +1,173 @@
+body{
+  background-color: #b59d97;
+  height: 100vh; /* Full viewport height */
+  margin: 0;
+}
+
+.container{
+
+  text-align: center;
+  margin-left: 5rem;
+}
+
+.navbar{
+  width: 17rem;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.form_group {
+  display: flex;
+  align-items: center; 
+  gap: 2.8rem; 
+  margin-bottom: 15px; 
+}
+
+label {
+  width: 8rem; /* optional: fixed width for label */
+}
+
+.rainbow-text{
+  transition: color 0.3s ease;
+}
+
+
+
+.details{
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  background-color: #3f4146;
+  margin-bottom: 1.5rem;
+  font-family:'lexend', sans-serif; 
+}
+
+.form_container{
+  width: 100%;
+  max-width:60%;
+  padding-top: 18rem;
+  margin-left: 3.2rem;
+  background-color: #444;
+  padding: 2rem;
+  border-radius: 15px;
+  font-size: 25px;
+  box-shadow: 0 0px 25px #77e0d833;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.btn_1 {
+  display: flex;
+  gap: 1.5rem;
+}
+
+
+.btn_1 a {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px #0000001a;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  color: #fff;
+  border: none;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+  transform: translateY(-2px);
+}
+
+/* Delete Button */
+.btn-outline-danger {
+  border: 2px solid #dc3545;
+  color: #dc3545;
+  background-color: transparent;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Cancel Button */
+.btn-outline-secondary {
+  border: 2px solid #6c757d;
+  color: #6c757d;
+  background-color: transparent;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+
+
+
+/* Mobile view and tablet views for both*/
+@media 
+(max-width:768px){
+body{
+  background-color: #585546;
+}
+.container,.form_container{
+  color: #eca3a3;
+}
+
+
+.container,.details{
+  font-family: "Poppins", sans-serif;
+  }
+
+ .btn_1 a,.form_container{
+  padding: 8px 10px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  
+ }
+
+.details,.rainbow-text:hover{
+  color: #60cb13;
+}
+
+}
+
+
+
+
+/* Laptop views  and Desktop for both */
+@media (min-width: 768px){
+  body{
+    background-color: #201b1bf5;
+  }
+
+.form_container{
+  margin-left: 15rem;
+}
+
+  .container,.details{
+    font-family: "Boldonse", system-ui;
+  }
+
+  .details,.form_container,.rainbow-text:hover{
+    color: #decc42;
+  } 
+
+
+}

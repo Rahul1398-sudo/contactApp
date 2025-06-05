@@ -1,0 +1,189 @@
+body{
+  /* background-color: #f2dddd; */
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  margin: 0;
+}
+
+.app-name{
+  max-width:60%;
+  margin: 0 auto;
+  color: #6fa559;
+  border-bottom: 1px solid #ae6363;
+  margin-bottom: 2rem;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+}
+
+.fa-info-circle{
+  padding: 2rem;
+}
+
+tbody{
+  font-size:12px;
+} 
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.table-container1{
+  width: 80%;
+  margin: 20px auto;
+  padding-bottom: 1rem;
+  border-collapse: collapse;
+  color: wheat;
+  overflow-x: auto;
+}
+
+table {
+  width: 70%;
+  margin:auto;
+  margin-top: 1.1rem;
+  border-collapse: collapse;
+  background-color: #0a2938;
+  overflow-x: auto;
+}
+
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: none;
+}
+
+th {
+  background-color: #4CAF50;
+  color: yellow;
+  border-bottom: 1px;
+}
+
+
+.navbar{
+  display: flex;
+  justify-content: center;
+  max-width:60%;
+  margin: 0 auto;
+  padding: 10px 4px;
+  background-color: #66416684;
+  position: relative;
+}
+
+.All-contacts{
+  color: #f2dddd;
+  padding:2px 8px ;
+  font-family: "Inconsolata", monospace;
+  font-size: 2rem;
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 8px 8px;
+  background-color: #098a09a1;
+  margin-right: 12px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  gap: 3px;
+  transition: transform 0.3s ease-in-out;
+}
+.row:hover{
+  background-color: #016b01;
+  box-shadow: 0 2px 15px #649453;
+  transform: translateY(-5px);
+}
+
+
+.add-new{
+  font-family: "Roboto", sans-serif;
+}
+
+
+.fa-fa1{
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  gap: 10px;
+}
+
+  .footer{
+    text-align: center;
+    padding-top: 18rem;
+  }
+
+/* All Responsive */
+
+/* for navbar */
+/* Mobile view and tablet views for both*/
+@media (max-width:768px){
+  body,.navbar{
+    background-color: #302524fa;
+  }
+.All-contacts,.app-name,th,tbody,.add-new,.footer{
+  font-family:cursive;
+}
+
+.app-name,th,tbody,.footer,.All-contacts,.fa-eye,.fa-edit,.fa-times,.fa-plus-circle,.add-new{
+  color: #FFFFFF;
+}
+.row{
+  color:#f1ecec;
+  background-color: #1f891b;
+  display: block;
+}
+
+.footer{
+  background-color: #05334979;
+  padding-top: 1rem;
+  border-radius: 10px;
+  border: 1px solid whitesmoke;
+  margin: 10px;
+  padding-bottom: -1rem;
+}
+}
+
+
+
+/* Laptop views  and Desktop for both */
+@media (min-width: 769px) {
+  body {
+    background-color: #181a1a;
+  }
+  .navbar{
+    background-color: #073442;
+}
+
+.table-container1{
+   box-shadow: 10px 8px 18px 10px #133826bb;
+}
+
+.All-contacts,.table-container1,.app-name,.fa-eye,.fa-edit,.fa-times,.fa-plus-circle,.add-new{
+  color: #ffff4d;
+}
+.footer{
+  color: red;
+  padding-bottom:1rem;
+  font-size: 1.2rem;
+}
+
+/* .fa-eye:hover{
+  color: green;
+} */
+
+
+
+.row{
+  color:#f1ecec;
+  background-color: #1f891b;
+  display: block;
+}
+}
+
